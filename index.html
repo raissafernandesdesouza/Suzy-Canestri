@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="Suzy Canestri, enfermeira podiatra em Lavras, MG. Cuidado podológico atencioso com agendamento pelo WhatsApp.">
+  <title>Suzy Canestri | Enfermagem Podiátrica em Lavras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f7f2;
+      --white: #fff;
+      --ink: #183c36;
+      --muted: #63736d;
+      --line: #dfe6dc;
+      --lime: #d7e58f;
+      --coral: #cf7059;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", "Trebuchet MS", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      aspect-ratio: 1;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      font-family: var(--serif);
+      font-size: 18px;
+    }
+    .brand-name { font-size: 13px; font-weight: 700; letter-spacing: 1.2px; line-height: 1.3; }
+    .brand-name span { display: block; color: var(--muted); font-size: 10px; font-weight: 500; letter-spacing: 1.4px; }
+    nav { display: flex; align-items: center; gap: 34px; }
+    nav a { color: var(--muted); font-size: 13px; text-decoration: none; }
+    nav a:hover { color: var(--ink); }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 20px;
+      border: 1px solid var(--ink);
+      border-radius: 3px;
+      background: var(--ink);
+      color: var(--white);
+      font: 600 13px var(--sans);
+      text-decoration: none;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .button:hover { background: #28584f; transform: translateY(-2px); }
+    .button svg { width: 17px; height: 17px; }
+    .topbar .button { min-height: 42px; padding-inline: 16px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      gap: clamp(40px, 7vw, 92px);
+      padding-block: 72px 86px;
+    }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--coral); font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
+    .eyebrow::before { width: 27px; height: 1px; background: currentColor; content: ""; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 600px; margin-block: 23px 20px; font: 500 clamp(44px, 5.2vw, 68px)/1.08 var(--serif); letter-spacing: 0; }
+    h1 em { color: var(--coral); font-style: normal; }
+    .hero-copy { max-width: 440px; margin-bottom: 28px; color: var(--muted); font-size: 16px; line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 17px; }
+    .text-link { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-size: 13px; font-weight: 600; text-decoration: none; }
+    .text-link svg { width: 16px; height: 16px; }
+    .trust-line { display: flex; align-items: center; gap: 10px; margin-top: 32px; color: var(--muted); font-size: 12px; }
+    .stars { color: #bd7c25; font-size: 15px; letter-spacing: 2px; }
+    .hero-visual { position: relative; min-width: 0; padding: 0 17px 18px 0; }
+    .hero-visual::before { position: absolute; z-index: -1; inset: 18px 0 0 18px; background: var(--lime); content: ""; }
+    .hero-photo { display: block; width: 100%; height: 460px; object-fit: cover; object-position: center; }
+    .photo-note {
+      position: absolute;
+      right: -4px;
+      bottom: 42px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 220px;
+      padding: 15px 18px;
+      background: var(--white);
+      box-shadow: 0 8px 28px #183c3614;
+    }
+    .note-icon { display: grid; flex: 0 0 37px; place-items: center; width: 37px; aspect-ratio: 1; border-radius: 50%; background: #edf1de; color: var(--ink); }
+    .note-icon svg { width: 19px; height: 19px; }
+    .photo-note strong { display: block; font-size: 12px; }
+    .photo-note span { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; line-height: 1.45; }
+
+    .info-band { background: var(--ink); color: var(--white); }
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 26px; }
+    .info-item { display: flex; align-items: center; gap: 14px; padding-inline: 27px; border-right: 1px solid #ffffff30; }
+    .info-item:first-child { padding-left: 0; }
+    .info-item:last-child { border: 0; }
+    .info-icon { display: grid; flex: 0 0 38px; place-items: center; width: 38px; aspect-ratio: 1; border: 1px solid #ffffff5c; border-radius: 50%; }
+    .info-icon svg { width: 18px; height: 18px; }
+    .info-item strong { display: block; font-size: 12px; }
+    .info-item span { display: block; margin-top: 4px; color: #d4dfd8; font-size: 11px; line-height: 1.5; }
+
+    .section { padding-block: 96px; }
+    .section-heading { max-width: 610px; margin-bottom: 38px; }
+    h2 { margin-block: 15px 13px; font: 500 clamp(34px, 4vw, 47px)/1.15 var(--serif); letter-spacing: 0; }
+    .section-intro { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+    .care-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .care-item { min-height: 184px; padding: 27px 26px 30px 0; }
+    .care-item + .care-item { padding-left: 27px; border-left: 1px solid var(--line); }
+    .care-index { color: var(--coral); font: 500 14px var(--serif); }
+    .care-item h3 { margin-block: 16px 9px; font: 600 20px var(--serif); }
+    .care-item p { max-width: 290px; margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+
+    .about { background: #edf1e7; }
+    .about-grid { display: grid; grid-template-columns: .86fr 1.14fr; align-items: center; gap: clamp(42px, 8vw, 108px); }
+    .about-photo-wrap { position: relative; max-width: 420px; padding: 0 15px 15px 0; }
+    .about-photo-wrap::after { position: absolute; z-index: 0; inset: 15px 0 0 15px; border: 1px solid #a8b898; content: ""; }
+    .about-photo { position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 1 / 1.05; object-fit: cover; }
+    .about-copy { max-width: 530px; }
+    .about-copy .section-intro { margin-top: 18px; }
+    .signature { margin-top: 27px; font: italic 23px var(--serif); }
+    .signature span { display: block; margin-top: 5px; color: var(--muted); font: 11px var(--sans); }
+
+    .reviews { display: grid; grid-template-columns: .7fr 1.3fr; gap: 70px; align-items: start; }
+    .rating { margin-top: 20px; font: 500 60px/.95 var(--serif); }
+    .rating-caption { margin-top: 12px; color: var(--muted); font-size: 12px; }
+    .review-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .review { min-height: 178px; padding: 24px; border: 1px solid var(--line); background: #ffffff80; }
+    .review .stars { font-size: 13px; }
+    .review blockquote { margin: 16px 0 18px; font: 500 17px/1.55 var(--serif); }
+    .review cite { color: var(--muted); font-size: 11px; font-style: normal; }
+
+    .booking { padding-block: 76px; background: var(--lime); }
+    .booking-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .booking h2 { max-width: 570px; margin-bottom: 8px; font-size: clamp(34px, 4vw, 48px); }
+    .booking p { margin-bottom: 0; color: #40574e; font-size: 13px; line-height: 1.7; }
+    .booking .button { flex: 0 0 auto; }
+
+    footer { padding-block: 54px 25px; background: #183c36; color: var(--white); }
+    .footer-main { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; padding-bottom: 42px; }
+    .footer-heading { margin-bottom: 14px; color: #d7e58f; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+    .footer-main p, .footer-main a { color: #d4dfd8; font-size: 12px; line-height: 1.8; }
+    .footer-main p { margin-bottom: 0; }
+    .footer-main a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
+    .footer-main a:hover { color: var(--white); }
+    .footer-main svg { width: 14px; height: 14px; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; border-top: 1px solid #ffffff2c; color: #bdcdc5; font-size: 10px; }
+    .floating-cta { position: fixed; right: 18px; bottom: 18px; z-index: 5; display: grid; place-items: center; width: 54px; aspect-ratio: 1; border-radius: 50%; background: #24865c; color: white; box-shadow: 0 5px 18px #173b2c55; }
+    .floating-cta svg { width: 25px; height: 25px; }
+    .floating-cta span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+    .reveal { animation: rise .7s both; }
+    .hero-visual { animation-delay: .12s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 36px, 560px); }
+      .topbar { min-height: 70px; }
+      nav { display: none; }
+      .topbar .button { min-height: 40px; padding-inline: 12px; font-size: 12px; }
+      .hero { grid-template-columns: 1fr; gap: 36px; padding-block: 55px 56px; }
+      h1 { max-width: 510px; font-size: clamp(43px, 12vw, 60px); }
+      .hero-copy { font-size: 14px; }
+      .hero-photo { height: min(78vw, 400px); }
+      .photo-note { right: 1px; bottom: 31px; }
+      .info-grid { grid-template-columns: 1fr; padding-block: 9px; }
+      .info-item, .info-item:first-child { min-height: 70px; padding-inline: 0; border-right: 0; border-bottom: 1px solid #ffffff30; }
+      .info-item:last-child { border-bottom: 0; }
+      .section { padding-block: 68px; }
+      .care-grid { grid-template-columns: 1fr; }
+      .care-item, .care-item + .care-item { min-height: 0; padding: 22px 0; border-left: 0; }
+      .care-item + .care-item { border-top: 1px solid var(--line); }
+      .care-item h3 { margin-block: 10px 7px; }
+      .about-grid { grid-template-columns: 1fr; gap: 37px; }
+      .about-photo-wrap { width: min(84%, 360px); }
+      .reviews { grid-template-columns: 1fr; gap: 28px; }
+      .rating { font-size: 52px; }
+      .review-list { grid-template-columns: 1fr; }
+      .review { min-height: 0; }
+      .booking { padding-block: 56px; }
+      .booking-inner { align-items: flex-start; flex-direction: column; }
+      .footer-main { grid-template-columns: 1fr; gap: 28px; padding-bottom: 30px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#inicio" aria-label="Suzy Canestri, página inicial">
+      <span class="brand-mark" aria-hidden="true">SC</span>
+      <span class="brand-name">SUZY CANESTRI<span>ENFERMEIRA PODIATRA</span></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#cuidado">O cuidado</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Localização</a>
+    </nav>
+    <a class="button" href="https://wa.me/5535988262387?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">
+      Agendar horário
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="inicio">
+      <div class="reveal">
+        <div class="eyebrow">Cuidado podológico em Lavras</div>
+        <h1>Seus pés merecem cuidado <em>de verdade.</em></h1>
+        <p class="hero-copy">Um atendimento atencioso, cuidadoso e pensado para você. Agende seu horário com Suzy Canestri, enfermeira podiatra.</p>
+        <div class="hero-actions">
+          <a class="button" href="https://wa.me/5535988262387?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-5.3A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.6-.5.4-1.1.6-1.8.5-1.2-.2-2.5-.8-3.8-1.9-1.6-1.4-2.7-3.1-3-4.3-.3-.9 0-1.5.3-1.7Z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a class="text-link" href="#cuidado">Conheça o atendimento <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="trust-line"><span class="stars" aria-label="5 estrelas">★★★★★</span><span><strong>5,0</strong> · 21 avaliações no Google</span></div>
+      </div>
+      <div class="hero-visual reveal">
+        <img class="hero-photo" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sqk0_Qxs4iB9jP5424k6v4OKlc2F-QEXeuVcbMlZGRPh1PdQ5JlG98O-xZ6b90NvretM0geuuVpi759wbxyWQ3zRhszm6jruvudpn48mJoWYAm2IPy8ZbfB5DroXPZf7t0XX50N_IaGGc=w397-h298-k-no" alt="Espaço de atendimento da clínica Suzy Canestri" fetchpriority="high">
+        <div class="photo-note">
+          <span class="note-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.6-7 11-7 11Z"/><path d="M9 12h6m-3-3v6"/></svg></span>
+          <span><strong>Cuidado com atenção</strong><span>Um atendimento acolhedor e individualizado.</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-band" aria-label="Informações da clínica">
+      <div class="wrap info-grid">
+        <div class="info-item">
+          <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span><strong>Lavras, Minas Gerais</strong><span>Jardim America</span></span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span><strong>Atendimento com hora marcada</strong><span>Entre em contato para agendar</span></span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20h18M5 20V8l7-5 7 5v12M9 20v-6h6v6"/></svg></span>
+          <span><strong>Acesso para todos</strong><span>Entrada, assento e banheiro acessíveis</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="cuidado">
+      <div class="section-heading">
+        <div class="eyebrow">O atendimento</div>
+        <h2>Cuidado que começa com escuta.</h2>
+        <p class="section-intro">Cada pessoa chega com uma necessidade diferente. Por isso, o atendimento é feito com atenção aos detalhes, conversa e cuidado em cada etapa.</p>
+      </div>
+      <div class="care-grid">
+        <article class="care-item">
+          <span class="care-index">01</span>
+          <h3>Um olhar individual</h3>
+          <p>O atendimento considera você e o que seus pés precisam, com atenção e respeito ao seu momento.</p>
+        </article>
+        <article class="care-item">
+          <span class="care-index">02</span>
+          <h3>Precisão e atenção</h3>
+          <p>Um trabalho cuidadoso, com atenção aos detalhes e foco em uma experiência tranquila.</p>
+        </article>
+        <article class="care-item">
+          <span class="care-index">03</span>
+          <h3>Ambiente preparado</h3>
+          <p>Uma sala climatizada e equipada para receber você com conforto e acolhimento.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="wrap section about-grid">
+        <div class="about-photo-wrap">
+          <img class="about-photo" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QTB7ByluuEHAYyN1q9JqeDS8s8x1hzr-_aSQTZv27hiQGEeobJ2JFQBv5cVlhK58QAwAq7Wt1kl1LlEXqOejgXXo_5Frj3wY-nxG5Gx4Gsr19DxW_nm5_y9ewuSQw7KFFzXG-QyFpw4GU=w298-h298-k-no" alt="Foto da clínica publicada pela proprietária" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Sobre a profissional</div>
+          <h2>Olá, sou a Suzy.</h2>
+          <p class="section-intro">Sou enfermeira podiatra e recebo cada pessoa com atenção, cuidado e profissionalismo. Meu compromisso é oferecer um atendimento acolhedor, em que você se sinta à vontade para conversar e cuidar da saúde dos seus pés.</p>
+          <p class="signature">Suzy Canestri<span>Enfermeira podiatra · Lavras, MG</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="avaliacoes">
+      <div class="reviews">
+        <div>
+          <div class="eyebrow">Quem já passou por aqui</div>
+          <h2>Confiança construída com cuidado.</h2>
+          <div class="rating">5,0</div>
+          <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <p class="rating-caption">21 avaliações no Google</p>
+        </div>
+        <div class="review-list">
+          <article class="review">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <blockquote>“Trabalho realizado com muita qualidade e profissionalismo!”</blockquote>
+            <cite>Avaliação no Google</cite>
+          </article>
+          <article class="review">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <blockquote>“Cuidadosa e com sala climatizada e bem equipada.”</blockquote>
+            <cite>Avaliação no Google</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking">
+      <div class="wrap booking-inner">
+        <div>
+          <div class="eyebrow">Agendamento</div>
+          <h2>Vamos cuidar de você?</h2>
+          <p>Fale diretamente com a clínica e combine o melhor horário.</p>
+        </div>
+        <a class="button" href="https://wa.me/5535988262387?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-5.3A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.6-.5.4-1.1.6-1.8.5-1.2-.2-2.5-.8-3.8-1.9-1.6-1.4-2.7-3.1-3-4.3-.3-.9 0-1.5.3-1.7Z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="wrap">
+      <div class="footer-main">
+        <div>
+          <div class="footer-heading">Suzy Canestri</div>
+          <p>Enfermeira podiatra<br>Lavras · Minas Gerais</p>
+        </div>
+        <div>
+          <div class="footer-heading">Endereço</div>
+          <p>R. Bernardino Botelho de Carvalho, 381<br>Jardim America, Lavras - MG<br>CEP 37202-791</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=R.+Bernardino+Botelho+de+Carvalho%2C+381%2C+Jardim+America%2C+Lavras+-+MG" target="_blank" rel="noopener noreferrer" aria-label="Abrir endereço no Google Maps">Ver no mapa <span aria-hidden="true">↗</span></a>
+        </div>
+        <div>
+          <div class="footer-heading">Fale com a clínica</div>
+          <p><a href="tel:+5535988262387">(35) 98826-2387</a></p>
+          <p><a href="https://www.instagram.com/suzycanestri_enf_podiatra/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a></p>
+          <p><a href="https://wa.me/5535988262387?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp <span aria-hidden="true">↗</span></a></p>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>Suzy Canestri · Enfermeira Podiatra</span><span>Atendimento mediante agendamento</span></div>
+    </div>
+  </footer>
+
+  <a class="floating-cta" href="https://wa.me/5535988262387?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp"><span>Agendar pelo WhatsApp</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-5.3A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.6-.5.4-1.1.6-1.8.5-1.2-.2-2.5-.8-3.8-1.9-1.6-1.4-2.7-3.1-3-4.3-.3-.9 0-1.5.3-1.7Z"/></svg></a>
+</body>
+</html>
